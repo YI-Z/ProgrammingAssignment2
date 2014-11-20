@@ -6,16 +6,16 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
-    changed <- FALSE
+    changed <- FALSE    ##  a logic value to identify whether the original matrix changed or not
     set <- function(y) {
         x <<- y
         inv <<- NULL
-        changed <<- TRUE
+        changed <<- TRUE  ## change status change only when new value assigned to it
     } 
     get <- function() x
     setinverse <- function(i) {
         inv <<- i
-        changed <- FALSE
+        changed <- FALSE  ## change status becomes false after inverse computation
     }
     getinverse <- function() inv
     isChanged <- function() changed
