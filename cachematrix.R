@@ -15,7 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
     get <- function() x
     setinverse <- function(i) {
         inv <<- i
-        changed <- FALSE  ## change status becomes false after inverse computation
+        changed <<- FALSE  ## change status becomes false after inverse computation
     }
     getinverse <- function() inv
     isChanged <- function() changed
